@@ -2,37 +2,42 @@ package com.example.android.NewsAppStage1;
 
 public class News {
 
-private String nHeadline;
+    private String mHeadline;
 
-private String nSection;
+    private String mSection;
 
-private String nDate;
+    private String mDate;
 
+    private String mUrl;
 
+    private String mWriter;
 
-private String nUrl;
+    public News(String headline, String section, String date, String writer, String url) {
 
-
-public News(String headline , String section , String date  , String url ){
-
-    nHeadline =headline;
-    nSection =section;
-    nDate =date;
-    nUrl=url;
-
-}
-
-    public String getnHeadline() {
-        return nHeadline;
+        mHeadline = headline;
+        mSection = section;
+        mDate = date;
+        mWriter = writer;
+        mUrl = url;
     }
 
-    public String getnSection() {
-        return nSection;
+    public String getmHeadline() {
+        return mHeadline;
     }
 
-    public String getnDate(){
-        return nDate;
+    public String getmSection() {
+        return mSection;
     }
 
-    public String getnUrl(){return nUrl;}
+    public String getmDate() {
+        return mDate;
+    }
+
+    public String getmWriter() {
+        return mWriter;
+    }
+
+    public String getmUrl() {
+        return mUrl;
+    }
 }

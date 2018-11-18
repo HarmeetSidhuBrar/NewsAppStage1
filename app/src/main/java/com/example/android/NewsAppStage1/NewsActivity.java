@@ -50,7 +50,7 @@ public class NewsActivity extends AppCompatActivity
      * URL for news data from the Guardian dataset
      */
     private static final String NEWS_REQUEST_URL = "http://content.guardianapis.com/search?show-tags=contributor" +
-            "&api-key=fe71bc46-c646-4dc6-8db7-e6e5a31b8437&q=india";
+            "&api-key=9b180f12-2a13-474c-84d0-1685e7459b0b";
 
     /**
      * Adapter for the list of News
@@ -92,7 +92,7 @@ public class NewsActivity extends AppCompatActivity
                 News currentNews = mAdapter.getItem(position);
 
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
-                Uri earthquakeUri = Uri.parse(currentNews.getnUrl());
+                Uri earthquakeUri = Uri.parse(currentNews.getmUrl());
 
                 // Create a new intent to view the news URI
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);

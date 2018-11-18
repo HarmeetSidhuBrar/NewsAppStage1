@@ -18,7 +18,6 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Created by Harmeet Sidhu on 11/17/2018.
  */
@@ -43,7 +42,7 @@ public class QueryUtils {
      * Query the Guardian dataset and return a list of {@link News} objects.
      */
     public static List<News> fetchNewsData(String requestUrl) {
-        Log.i(LOG_TAG,"Test: fetchNewsData() called");
+        Log.i(LOG_TAG, "Test: fetchNewsData() called");
         // Create URL object
         URL url = createUrl(requestUrl);
 
@@ -180,7 +179,7 @@ public class QueryUtils {
                     }
                 }
                 if (writer != null) {
-                    news.add(new News(webTitle,section,date,link));
+                    news.add(new News(webTitle, section, date, writer.toString(), link));
                 }
             }
         } catch (JSONException e) {
